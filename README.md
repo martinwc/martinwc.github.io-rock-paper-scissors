@@ -8,3 +8,7 @@ The goals are:
 
 1. build a responsive website using javascript
 2. learn more javascript and utilize html/css properties
+
+1/14/2024
+
+added javascript to index.html

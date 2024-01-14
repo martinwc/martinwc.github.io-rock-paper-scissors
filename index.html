@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <meta charset="UTF-8">
+    <head>
+        <title>Rock Paper Scissors TOP project</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            // the computer's choices
+
+            function getComputerChoice() {
+                let choice = ["rock", "paper", "scissors"]
+                let randomChoice = Math.floor(Math.random() * choice.length) + 1
+                
+                if (randomChoice === 1) {
+                    return ("rock");
+                } if (randomChoice === 2) {
+                    return ("paper");
+                } if (randomChoice === 3) {
+                    return ("scissors")
+                }
+            }
+
+            // function to play the round
+
+            const playerSelection = prompt("rock,paper or scissors?")
+            const computerSelection = getComputerChoice();
+            
+            function gameRound(playerSelection, computerSelection) {
+                if (playerSelection === computerSelection) {
+                    return ("it's a TIE, PLAY AGAIN");
+                } if (playerSelection === "rock" && computerSelection === "scissors") {
+                    return ("YOU WIN! ROCK BEATS SCISSORS!");
+                } if (playerSelection === "paper" && computerSelection === "rock") {
+                    return ("YOU WIN! PAPER BEATS ROCK");
+                } if (playerSelection === "scissors" && computerSelection === "paper") {
+                    return ("YOU WIN! SCISSORS BEATS PAPER")
+                } else {
+                    return (`"YOU LOSE! ${computerSelection} beats ${playerSelection}"`)
+                } 
+            }
+
+            // play the round 5 times
+            function game() {
+                for(let i =0; i < 5; i++) {
+                    console.log(gameRound(playerSelection, computerSelection));
+                }
+            } 
+                game();
+
+
+         
+            
+
+
+            
+    
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Hello</h1>
+    </body>
+</html>
+
+<!-- 
+    - start the function 
+    - add the variable to get user to enter the choice
+    - when the choice is selected from one of the 3 options (rock paper or scissors)
+    - return a random answer of one of the 3 choices
+ -->
